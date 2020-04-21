@@ -1,10 +1,10 @@
 #!/bin/bash
 
-for filename in $(ls -a)
+for filename in $(ls)
 do  
     if [ "$filename" != "setup.sh" ]
     then
-        ln -s $filename ~/$filename
+        ln -s "$filename" ~/."$filename"
         echo $filename
     fi
 done
