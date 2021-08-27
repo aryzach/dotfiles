@@ -4,6 +4,8 @@ syntax on
 " spell checker
 map <F5> :setlocal spell! spelllang=en_us<CR>
 
+map e :set number!
+
 "remap 
 :imap jj <Esc>
 
@@ -21,22 +23,24 @@ set autoindent
 set ignorecase
 set smartcase
 
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
+"nnoremap <Left>  :echoe "Use h"<CR>
+"nnoremap <Right> :echoe "Use l"<CR>
+"nnoremap <Up>    :echoe "Use k"<CR>
+"nnoremap <Down>  :echoe "Use j"<CR>
 " ...and in insert mode
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
+"inoremap <Left>  <ESC>:echoe "Use h"<CR>
+"inoremap <Right> <ESC>:echoe "Use l"<CR>
+"inoremap <Up>    <ESC>:echoe "Use k"<CR>
+"inoremap <Down>  <ESC>:echoe "Use j"<CR>
 "new"
 set number
 set ma
 filetype plugin indent on
 "tabs to spaces
-set expandtab
+"set expandtab
+set softtabstop=0 noexpandtab
 set shiftwidth=4
+set tabstop=2
 "On pressing tab, insert 2 spaces
 "set expandtab
 " " show existing tab with 2 spaces width
@@ -44,3 +48,7 @@ set shiftwidth=4
 " set softtabstop=2
 " " when indenting with '>', use 2 spaces width
 " set shiftwidth=2
+
+"css autocomplete
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
