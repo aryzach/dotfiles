@@ -20,10 +20,10 @@ export PS1="$ "
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Enable tab completion
-source ~/.udacity-terminal-config/git-completion.bash
+#source ~/.udacity-terminal-config/git-completion.bash
 
 # Change command prompt
-source ~/.udacity-terminal-config/git-prompt.sh
+#source ~/.udacity-terminal-config/git-prompt.sh
 
 # colors!
 red="\[\033[38;5;203m\]"
@@ -36,6 +36,8 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds git-related stuff
 # '\W' adds the name of the current directory
-export PS1="$red\u$green\$(__git_ps1)$blue \W
+export PS1="$red\u$green\$(__git_ps1)$green \W
 $ $reset"
+
+if [ -e /home/aryzach/.nix-profile/etc/profile.d/nix.sh ]; then . /home/aryzach/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
