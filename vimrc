@@ -52,3 +52,6 @@ set tabstop=2
 "css autocomplete
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+
+"to make vim color scheme show up in tmux sessions
+set background=dark
