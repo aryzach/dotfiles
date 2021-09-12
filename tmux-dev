@@ -5,6 +5,7 @@ session="work"
 # set up tmux
 tmux start-server
 
+#___________________________________________________________window0
 # create a new tmux session 
 tmux new-session -d -s $session 
 tmux send-keys "cd ~/Documents" C-m
@@ -20,6 +21,10 @@ tmux send-keys "cd ~/Documents" C-m
 # Select pane 1
 #tmux selectp -t 1
 
+tmux new-session -d -s $session -n code 
+tmux send-keys "cd ~/Documents/Projects/Active/trading/scalaTradingBot/src/main/scala/" C-m
+
+#___________________________________________________________window1
 # create a new window called scratch, move to program files dir
 tmux new-window -t $session:1 -n code 
 tmux send-keys "cd ~/Documents" C-m
@@ -27,6 +32,40 @@ tmux send-keys "cd ~/Documents" C-m
 # Split pane 1 horizontal by 65%, start sbt
 tmux splitw -h -p 35 
 tmux send-keys "cd ~/" C-m
+
+tmux new-window -t $session:1 -n compile
+tmux send-keys "cd ~/Documents/Projects/Active/trading/scalaTradingBot" C-m
+tmux send-keys "sbt" C-m
+tmux send-keys "~compile" C-m
+
+# Split pane 1 vertically by 65%, start sbt
+tmux splitw -v -p 35 
+tmux send-keys "cd ~/Documents/Projects/Active/trading/scalaTradingBot" C-m
+tmux send-keys "sbt" C-m
+
+#___________________________________________________________window2
+# create a new window called scratch, move to program files dir
+tmux new-window -t $session:2 -n notes
+tmux send-keys "cd ~/Documents/Projects/Active/trading/scalaTradingBot" C-m
+tmux send-keys "vim todo.txt" C-m
+tmux splitw -v -p 50 
+tmux send-keys "cd ~/Documents/Projects/Active/trading/scalaTradingBot" C-m
+tmux send-keys "vim questions.txt" C-m
+
+#___________________________________________________________window3
+# start ib 
+tmux new-window -t $session:3 -n ibInterface
+tmux send-keys "./Jts/ibgateway/981/ibgateway" C-m
+
+#___________________________________________________________window4
+# ib client code
+tmux new-window -t $session:4 -n ibClientCode
+tmux send-keys "cd ~/Documents/Projects/Active/trading/ibclient/src/main/scala/com/larroy/ibclient/" C-m
+
+#___________________________________________________________window5
+# old python code
+tmux new-window -t $session:5 -n pythonCode
+tmux send-keys "cd ~/Documents/Projects/Active/trading/pythonTradingBot/bot/" C-m
 
 # return to main vim window
 tmux select-window -t $session:0
