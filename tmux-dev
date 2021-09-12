@@ -67,6 +67,13 @@ tmux send-keys "cd ~/Documents/Projects/Active/trading/ibclient/src/main/scala/c
 tmux new-window -t $session:5 -n pythonCode
 tmux send-keys "cd ~/Documents/Projects/Active/trading/pythonTradingBot/bot/" C-m
 
+#___________________________________________________________window6
+# project root for git
+tmux new-window -t $session:6 -n root
+tmux send-keys "cd ~/Documents/Projects/Active/trading/scalaTradingBot/" C-m
+tmux send-keys "git status" C-m
+
+
 # return to main vim window
 tmux select-window -t $session:0
 
