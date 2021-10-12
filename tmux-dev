@@ -7,7 +7,7 @@ tmux start-server
 
 # create a new tmux session 
 tmux new-session -d -s $session 
-tmux send-keys "cd ~/Documents/Projects/Active/trading/scalaTradingBot/src/main/scala/" C-m
+tmux send-keys "cd ~/Documents" C-m
 # Select pane 2
 #tmux selectp -t 2
 # Split pane 2 vertiacally by 25%
@@ -22,14 +22,11 @@ tmux send-keys "cd ~/Documents/Projects/Active/trading/scalaTradingBot/src/main/
 
 # create a new window called scratch, move to program files dir
 tmux new-window -t $session:1 -n code 
-tmux send-keys "cd ~/Documents/Projects/Active/trading/scalaTradingBot" C-m
-tmux send-keys "sbt" C-m
-tmux send-keys "~compile" C-m
+tmux send-keys "cd ~/Documents" C-m
 
 # Split pane 1 horizontal by 65%, start sbt
 tmux splitw -h -p 35 
-tmux send-keys "cd ~/Documents/Projects/Active/trading/scalaTradingBot" C-m
-tmux send-keys "sbt" C-m
+tmux send-keys "cd ~/" C-m
 
 # return to main vim window
 tmux select-window -t $session:0
