@@ -1,5 +1,5 @@
 
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/.local/bin:~/miniconda3/bin/
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/.local/bin:~/miniconda3/bin/:/snap/bin/
 
 bind TAB:menu-complete
 bind 'set completion-ignore-case on'
