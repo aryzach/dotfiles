@@ -7,7 +7,13 @@ map <F5> :setlocal spell! spelllang=en_us<CR>
 map e :set number!
 
 "remap 
-:imap jj <Esc>
+imap qq <Esc>
+nnoremap q :
+nmap : :echo "No colon for you!"<CR>
+nnoremap f i
+nnoremap i :echo "No insert for you!"<CR>
+
+
 
 "CtrlP"
 set runtimepath^=~/.vim/pack/vendor/start/ctrlp.vim
@@ -23,15 +29,6 @@ set autoindent
 set ignorecase
 set smartcase
 
-"nnoremap <Left>  :echoe "Use h"<CR>
-"nnoremap <Right> :echoe "Use l"<CR>
-"nnoremap <Up>    :echoe "Use k"<CR>
-"nnoremap <Down>  :echoe "Use j"<CR>
-" ...and in insert mode
-"inoremap <Left>  <ESC>:echoe "Use h"<CR>
-"inoremap <Right> <ESC>:echoe "Use l"<CR>
-"inoremap <Up>    <ESC>:echoe "Use k"<CR>
-"inoremap <Down>  <ESC>:echoe "Use j"<CR>
 "new"
 set number
 set ma
