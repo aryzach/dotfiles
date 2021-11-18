@@ -4,7 +4,7 @@ syntax on
 " spell checker
 map <F5> :setlocal spell! spelllang=en_us<CR>
 
-map e :set number!
+map <F6> qset number!
 
 "remap 
 imap qq <Esc>
