@@ -42,3 +42,19 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Docker aliases
+alias dim="docker images -a"
+alias dcls="docker container ls"
+alias dclsa="docker container ls -a"
+alias dsp="docker system prune --all"
+alias db="docker build"
+alias drmi="docker rmi"
+alias drwm="docker run -v ${PWD}:/app $1"
+alias dfri="docker rmi -f '$(docker images -aq)'"
+
+# usage: drv [IMAGE], prints docker stout to host
+alias drv="docker run -v ${PWD}:/app" 
+
+
+
+
