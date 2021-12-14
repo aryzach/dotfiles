@@ -27,11 +27,6 @@ $ $reset"
 
 source ~/.bash-git-prompt/gitprompt.sh
 
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
-
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/aryzach/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -46,4 +41,20 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Docker aliases
+alias dim="docker images -a"
+alias dcls="docker container ls"
+alias dclsa="docker container ls -a"
+alias dsp="docker system prune --all"
+alias db="docker build"
+alias drmi="docker rmi"
+alias drwm="docker run -v ${PWD}:/app $1"
+alias dfri="docker rmi -f '$(docker images -aq)'"
+
+# usage: drv [IMAGE], prints docker stout to host
+alias drv="docker run -v ${PWD}:/app" 
+
+
+
 
