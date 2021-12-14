@@ -596,7 +596,7 @@ function updatePrompt() {
     NEW_PROMPT="${EMPTY_PROMPT}"
   fi
 
-  PS1="${NEW_PROMPT//_LAST_COMMAND_INDICATOR_/${LAST_COMMAND_INDICATOR}${ResetColor}}"
+  PS1="\h${NEW_PROMPT//_LAST_COMMAND_INDICATOR_/${LAST_COMMAND_INDICATOR}${ResetColor}}"
   command rm "${GIT_INDEX_PRIVATE}" 2>/dev/null
 }
 
