@@ -2,7 +2,7 @@ filetype plugin indent on
 syntax on
 
 " spell checker
-map <F5> :setlocal spell! spelllang=en_us<CR>
+map <F5> qsetlocal spell! spelllang=en_us<CR>
 
 map <F6> qset number!
 
@@ -52,3 +52,6 @@ set omnifunc=syntaxcomplete#Complete
 
 "to make vim color scheme show up in tmux sessions
 set background=dark
+
+" remove underscore highlighting in markdown
+hi link markdownError Normal
