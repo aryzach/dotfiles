@@ -15,4 +15,4 @@ do
     fi
 done
 
-source ~/.bash_profile
+source ~/.bashrc
