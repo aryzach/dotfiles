@@ -9,6 +9,8 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     source $HOME/.bash-git-prompt/gitprompt.sh
 fi
 
+export EDITOR=vim
+
 
 
 # colors!
@@ -26,6 +28,11 @@ export PS1="$red\u$green \W
 $ $reset"
 
 source ~/.bash-git-prompt/gitprompt.sh
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -51,10 +58,16 @@ alias db="docker build"
 alias drmi="docker rmi"
 alias drwm="docker run -v ${PWD}:/app $1"
 alias dfri="docker rmi -f '$(docker images -aq)'"
+alias dac="docker ps -a -q"
+
+dkac() {
+		docker rm -vf echo $(docker ps -a -q)
+}
+export -f dkac
 
 # usage: drv [IMAGE], prints docker stout to host
-alias drv="docker run -v ${PWD}:/app" 
+alias drv="docker run -v ${PWD}:/app"
 
-
+alias dka="(dkac || true) && dsp && dfri"
 
 
