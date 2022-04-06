@@ -57,7 +57,7 @@ alias dsp="docker system prune --all"
 alias db="docker build"
 alias drmi="docker rmi"
 alias drwm="docker run -v ${PWD}:/app $1"
-alias dfri="docker rmi -f '$(docker images -aq)'"
+#alias dfri="docker rmi -f '$(docker images -aq)'"
 alias dac="docker ps -a -q"
 
 dkac() {
