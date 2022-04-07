@@ -34,8 +34,8 @@ set number
 set ma
 filetype plugin indent on
 "tabs to spaces
-"set expandtab
-set softtabstop=0 noexpandtab
+set expandtab
+"set softtabstop=0 noexpandtab
 set shiftwidth=4
 set tabstop=2
 "On pressing tab, insert 2 spaces
