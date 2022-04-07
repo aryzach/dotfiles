@@ -1,5 +1,6 @@
-filetype plugin indent on
 syntax on
+filetype on
+filetype plugin indent on
 
 " spell checker
 map <F5> qsetlocal spell! spelllang=en_us<CR>
@@ -32,10 +33,9 @@ set smartcase
 "new"
 set number
 set ma
-filetype plugin indent on
 "tabs to spaces
 set expandtab
-"set softtabstop=0 noexpandtab
+set softtabstop=0 noexpandtab
 set shiftwidth=4
 set tabstop=2
 "On pressing tab, insert 2 spaces
@@ -47,7 +47,6 @@ set tabstop=2
 " set shiftwidth=2
 
 "css autocomplete
-filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 "to make vim color scheme show up in tmux sessions
