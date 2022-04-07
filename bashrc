@@ -1,8 +1,8 @@
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/.local/bin:~/miniconda3/bin/:/snap/bin/
 
-set TAB:menu-complete
-set completion-ignore-case on
+bind 'TAB:menu-complete'
+bind 'set completion-ignore-case on'
 
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
@@ -51,6 +51,7 @@ unset __conda_setup
 
 # Docker aliases
 alias dim="docker images -a"
+alias dimaq="docker images -a -q"
 alias dcls="docker container ls"
 alias dclsa="docker container ls -a"
 alias dsp="docker system prune --all"
@@ -59,11 +60,23 @@ alias drmi="docker rmi"
 alias drwm="docker run -v ${PWD}:/app $1"
 #alias dfri="docker rmi -f '$(docker images -aq)'"
 alias dac="docker ps -a -q"
+alias dpasq="docker ps -a -q"
 
-dkac() {
-		docker rm -vf echo $(docker ps -a -q)
+function dpsaq {
+		docker ps -a -q
+}
+export -f dpsaq
+
+function dkac {
+		docker rm -vf $(dpsaq)
 }
 export -f dkac
+
+function dfri {
+		docker rmi -f $(echo dimaq)
+}
+export -f dfri
+
 
 # usage: drv [IMAGE], prints docker stout to host
 alias drv="docker run -v ${PWD}:/app"
