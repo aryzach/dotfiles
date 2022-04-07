@@ -1,8 +1,8 @@
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/.local/bin:~/miniconda3/bin/:/snap/bin/
 
-bind TAB:menu-complete
-bind 'set completion-ignore-case on'
+set TAB:menu-complete
+set completion-ignore-case on
 
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
