@@ -35,7 +35,7 @@ set number
 set ma
 "tabs to spaces
 set expandtab
-set softtabstop=0 noexpandtab
+set softtabstop=0 
 set shiftwidth=4
 set tabstop=2
 "On pressing tab, insert 2 spaces
