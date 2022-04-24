@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/aryzach/Documents/Projects/Active/purescript-book/exercises/chapter2'
+let g:netrw_dirhist_2='/home/aryzach/Documents/Projects/Active/purescript-book/exercises/chapter8/src/Data/AddressBook'
+let g:netrw_dirhist_3='/etc/apt/sources.list.d'
+let g:netrw_dirhist_4='/tmp'
