@@ -7,14 +7,20 @@ map <F5> qsetlocal spell! spelllang=en_us<CR>
 
 map <F6> qset number!
 
-"remap 
+"remap
+"enter normal mode from insert mode
 imap qq <Esc>
+"enter command-line mode from normal mode 
 nnoremap q :
+" disallow colon to enter command-line mode
 nmap : :echo "No colon for you!"<CR>
+"enter insert mode from normal mode
 nnoremap f i
 nnoremap i :echo "No insert for you!"<CR>
+"record a macro
+nnoremap z q
 
-
+set viminfo='100,<1000,s100,h
 
 "CtrlP"
 set runtimepath^=~/.vim/pack/vendor/start/ctrlp.vim
