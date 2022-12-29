@@ -83,4 +83,11 @@ alias drv="docker run -v ${PWD}:/app"
 
 alias dka="(dkac || true) && dsp && dfri"
 
+function tarmax {
+		tar cvf - $1 | gzip -9 - > $2
+}
+export -f tarmax
 
+
+
+[ -f "/home/aryzach/.ghcup/env" ] && source "/home/aryzach/.ghcup/env" # ghcup-env
