@@ -50,7 +50,16 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Git aliases
-alias gac="git add . && git commit -m "
+function gacp() {
+    git add . 
+    sleep 1
+    git commit -m $1 
+    sleep 1 
+    git push
+}
+export -f gacp
+
+
 
 # Docker aliases
 alias dim="docker images -a"
