@@ -53,7 +53,7 @@ unset __conda_setup
 function gacp() {
     git add . 
     sleep 1
-    git commit -m $1 
+    git commit -m "$1" 
     sleep 1 
     git push
 }
