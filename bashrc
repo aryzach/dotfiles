@@ -49,6 +49,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Git aliases
+alias gac="git add . && git commit -m "
+
 # Docker aliases
 alias dim="docker images -a"
 alias dimaq="docker images -a -q"
