@@ -96,9 +96,9 @@ alias drv="docker run -v ${PWD}:/app"
 alias dka="(dkac || true) && dsp && dfri"
 
 function tarmax {
-    FILENAME="${2}.tar.gz"
-    echo $FILENAME
-		tar cvf - $1 | gzip -9 - > "$FILENAME"
+    FILENAME=$2
+    FN="${FILENAME}.tar.gz"
+		tar cvf - $1 | gzip -9 - > $FN
 }
 export -f tarmax
 
