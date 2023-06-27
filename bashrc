@@ -1,5 +1,6 @@
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/.local/bin:~/miniconda3/bin/:/snap/bin/
+export PATH=~/.npm-global/bin:$PATH
 
 bind 'TAB:menu-complete'
 bind 'set completion-ignore-case on'
@@ -105,3 +106,11 @@ export -f tarmax
 
 
 [ -f "/home/aryzach/.ghcup/env" ] && source "/home/aryzach/.ghcup/env" # ghcup-env
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
