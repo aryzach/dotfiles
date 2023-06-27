@@ -103,6 +103,12 @@ function tarmax {
 }
 export -f tarmax
 
+function b {
+    BRIGHTNESS=$1
+    echo "${BRIGHTNESS}" | sudo tee /sys/class/backlight/intel_backlight/brightness
+}
+export -f b
+
 
 
 [ -f "/home/aryzach/.ghcup/env" ] && source "/home/aryzach/.ghcup/env" # ghcup-env
