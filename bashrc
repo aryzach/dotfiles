@@ -60,6 +60,14 @@ function gacp() {
 }
 export -f gacp
 
+function gacpu() {
+    git add . 
+    sleep 1
+    git commit -m "up" 
+    sleep 1 
+    git push
+}
+export -f gacpu
 
 
 # Docker aliases
