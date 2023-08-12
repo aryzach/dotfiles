@@ -1,3 +1,10 @@
+" installs vim-plug, the vim plugin manager
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 syntax on
 filetype on
 filetype plugin indent on
@@ -18,7 +25,7 @@ nmap : :echo "No colon for you!"<CR>
 nnoremap f i
 nnoremap i :echo "No insert for you!"<CR>
 "record a macro
-nnoremap z q
+"nnoremap z q
 
 set viminfo='100,<1000,s100,h
 
@@ -60,3 +67,13 @@ set background=dark
 
 " remove underscore highlighting in markdown
 hi link markdownError Normal
+
+" testing vim-plug
+" https://github.com/junegunn/vim-plug
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
+call plug#end()

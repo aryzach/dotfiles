@@ -1,6 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/aryzach/Documents/Projects/Active/purescript-book/exercises/chapter2'
-let g:netrw_dirhist_2='/home/aryzach/Documents/Projects/Active/purescript-book/exercises/chapter8/src/Data/AddressBook'
-let g:netrw_dirhist_3='/etc/apt/sources.list.d'
-let g:netrw_dirhist_4='/tmp'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/aryzach/Documents/spontaneousConnection/spontaneousConnection'
+let g:netrw_dirhist_0='/home/aryzach/Documents/spontaneousConnectionLambda/client'
+let g:netrw_dirhist_9='/home/aryzach/Documents/serverless-express'
+let g:netrw_dirhist_8='/home/aryzach/Documents/resume/domains/ai'
+let g:netrw_dirhist_7='/home/aryzach/Documents/resume/companies/visa'
+let g:netrw_dirhist_6='/home/aryzach/Documents/resume/companies'
+let g:netrw_dirhist_5='/home/aryzach/Documents/learn_django/commerce/commerce'
+let g:netrw_dirhist_4='/home/aryzach/Documents/learn_django/commerce'
+let g:netrw_dirhist_3='/home/aryzach/Documents/resume/webdev'
+let g:netrw_dirhist_2='/home/aryzach/Documents/resume'
