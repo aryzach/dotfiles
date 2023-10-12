@@ -28,8 +28,8 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # '\$(__git_ps1)' adds git-related stuff
 # '\W' adds the name of the current directory
 export PS1='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$' 
-PROMPT='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ $(git_super_status) # 
-'
+PROMPT='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ $(git_super_status)
+# '
 
 #$ $reset"
 
